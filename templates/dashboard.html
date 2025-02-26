@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{%static 'css\style.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNEB Electrical Calculater</title>
+</head>
+<body class="table">
+    {% block content %}
+    <h1>TNEB Electrical tariff Rate 2022-23 upto 2026-27</h1>
+    <a href="">Home</a>
+    <!-- <a href="checkDetails">All Data</a> -->
+    <form action="{%url 'dashboard' %}" class="form" method="POST">
+        {% csrf_token %}
+        <!-- <select name="districts" id="districts" required>
+            <option value="Theni">Theni</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Madurai">Madurai</option>
+        </select> -->
+        <label for="pre_reading"> Previous Reading</label>
+        <input type="number" name="pre_reading" placeholder="kwh" required>
+        <label for="cur_reading"> Current Reading</label>
+        <input type="number" name="cur_reading" placeholder="kwh" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <h3>Consuming Units - {{units}} units</h3>
+    <h3>Shall Pay - ₹ {{cost}}/-</h3>
+    {% endblock %}
+
+    <h1>Domestic Tariff:</h1>
+    <h4><p class="para">Domestic, Multi-tenements, Old age homes, Handlooms comes to this category,
+        they shall pay 4.5 per unit, upto 200 kWh and ₹ 6.00 for the unit consumption 201 to 251.
+        For the consumption of above 250 units, the consumer shall fall into another tariff plan such as,
+        ₹4.5 for the first 200 units, ₹ 6 for the next 50 units, ₹ 8/- for the next 50 units such as 251 to 300,
+        9 for the next 100 units from 301 to 400, 10/- for the next 100 units from 401 to 500 and the ₹11 for the 
+        remaining consumption will be charged. Here there is not fixed charges will be billed for the consumer.</p></h4>
+    
+</body>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+.table {
+    background-color: aqua;
+    
+    
+}
+.form label{
+    padding: 50px;
+    font-size: 20px;
+    color: rgb(245, 32, 199);
+}
+h1{
+    text-align: center;
+    color: rgb(91, 13, 236);
+}
+.form button{
+    padding: 2px;
+    font-size: 20px;
+    background-color:rgb(96, 245, 27);
+    border-radius: 5px;
+   
+
+    
+}
+a{
+    padding: 20px 20px;
+    color: rgb(74, 13, 241);
+}
+select{
+    padding: 5px;
+    font-size: medium;
+    margin-left: 20px;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+}
+.form input{
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 2px rgb(128, 128, 128);
+}
+/* .form{
+    text-align: center;
+    display: flex;
+    padding: 0px 20px;
+} */
+h3 {
+    text-align: center;
+    font-size: 30px;
+    color: brown;
+}
+h4 p{
+    font-size: 25px;
+    text-align: center;
+    padding: 0px 20px;
+    display: flex;
+    
+}
+data{
+    text-align: center;
+}
